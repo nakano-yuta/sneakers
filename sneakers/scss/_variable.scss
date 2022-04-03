@@ -1,0 +1,34 @@
+// color
+$color-font: #333;
+$color-bg: #fff;
+
+// font-family
+$font-base: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// header-height
+$header-height: 80px;
+
+// layer-level
+$layer: (
+  hamburger: 30,
+  drawer: 20,
+  header: 10,
+  default: 1,
+);
+
+// break-points
+$breakpoints: (
+  "sm": "(min-width: 576px)",
+  "md": "(min-width: 768px)",
+  "tab": "(min-width: 768px) and (max-width: 991px)",
+  "lg": "(min-width: 992px)",
+  "xl": "(min-width: 1200px)",
+  "xxl": "(min-width: 1400px)",
+) !default;
+
+// media-query
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

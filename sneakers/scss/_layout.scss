@@ -1,0 +1,56 @@
+@use "sass:math";
+@use "variable" as val;
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.l-inner {
+  padding: 0 16px;
+
+  @include val.mq('md') {
+    max-width: 1208px + (16px * 2);
+    margin: 0 auto;
+  }
+}
+
+.l-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: map-get(val.$layer, header);
+  width: 100%;
+  height: val.$header-height;
+  background-color: #fff;
+}
+
+.l-main {
+  margin-top: val.$header-height;
+}
+
+.l-mainVisual {
+
+}
+
+.l-pickUp {
+  margin-top: 80px;
+
+  @include val.mq('md') {
+    margin-top: 100px;
+  }
+}
+
+.l-feature {
+  margin-top: 100px;
+}
+
+.l-contact {
+  margin-top: 90px;
+
+  @include val.mq('md') {
+    margin-top: 60px;
+  }
+}
+
+.l-footer {
+
+}

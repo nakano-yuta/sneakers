@@ -1,0 +1,13 @@
+@use "sass:math";
+@use "variable" as val;
+
+.fadeIn {
+  transform: translateY(20%);
+  opacity: 0;
+  transition: transform 0.6s, opacity 0.6s;
+
+  &.is-active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
